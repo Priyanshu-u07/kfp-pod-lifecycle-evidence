@@ -1,0 +1,323 @@
+=== 13:48:58 ===
+repro-configerror-klvsx | Running
+repro-imagepull-lgz66 | Running
+repro-invalidimage-6rltc | Running
+repro-nonzero-4b6m4 | Failed
+repro-oomkilled-cjt4z | Failed
+repro-recovery-s4z84 | Running
+repro-unschedulable-2xtqq | Running
+  --- nodes ---
+   repro-configerror-klvsx | Pending | CreateContainerConfigError: secret "does-not-exist" not found
+   repro-imagepull-lgz66 | Pending | ImagePullBackOff: Back-off pulling image "python:99.99.99-nonexistent": ErrImagePull: rpc error: code = NotFound desc = failed to pull and unpack image "docker.io/library/python:99.99.99-nonexistent": failed to resolve reference "docker.io/library/python:99.99.99-nonexistent": docker.io/library/python:99.99.99-nonexistent: not found
+   repro-invalidimage-6rltc | Pending | InvalidImageName: Failed to apply default image tag "THIS IS NOT A VALID IMAGE REFERENCE!!": couldn't parse image name "THIS IS NOT A VALID IMAGE REFERENCE!!": invalid reference format: repository name (library/THIS IS NOT A VALID IMAGE REFERENCE!!) must be lowercase
+   repro-nonzero-4b6m4 | Failed | main: Error (exit code 1)
+   repro-oomkilled-cjt4z | Failed | main: OOMKilled (exit code 137)
+   repro-recovery-s4z84 | Running | 
+   waiter | Pending | Unschedulable: 0/1 nodes are available: 1 Insufficient cpu. no new claims to deallocate, preemption: 0/1 nodes are available: 1 No preemption victims found for incoming pod.
+   hog | Running | 
+   [0] | Running | 
+   repro-unschedulable-2xtqq | Pending | Unschedulable: 0/1 nodes are available: 1 Insufficient cpu. no new claims to deallocate, preemption: 0/1 nodes are available: 1 Preemption is not helpful for scheduling.
+=== 13:49:08 ===
+repro-configerror-klvsx | Running
+repro-imagepull-lgz66 | Running
+repro-invalidimage-6rltc | Running
+repro-nonzero-4b6m4 | Failed
+repro-oomkilled-cjt4z | Failed
+repro-recovery-s4z84 | Running
+repro-unschedulable-2xtqq | Running
+  --- nodes ---
+   repro-configerror-klvsx | Pending | CreateContainerConfigError: secret "does-not-exist" not found
+   repro-imagepull-lgz66 | Pending | ImagePullBackOff: Back-off pulling image "python:99.99.99-nonexistent": ErrImagePull: rpc error: code = NotFound desc = failed to pull and unpack image "docker.io/library/python:99.99.99-nonexistent": failed to resolve reference "docker.io/library/python:99.99.99-nonexistent": docker.io/library/python:99.99.99-nonexistent: not found
+   repro-invalidimage-6rltc | Pending | InvalidImageName: Failed to apply default image tag "THIS IS NOT A VALID IMAGE REFERENCE!!": couldn't parse image name "THIS IS NOT A VALID IMAGE REFERENCE!!": invalid reference format: repository name (library/THIS IS NOT A VALID IMAGE REFERENCE!!) must be lowercase
+   repro-nonzero-4b6m4 | Failed | main: Error (exit code 1)
+   repro-oomkilled-cjt4z | Failed | main: OOMKilled (exit code 137)
+   repro-recovery-s4z84 | Running | 
+   waiter | Pending | Unschedulable: 0/1 nodes are available: 1 Insufficient cpu. no new claims to deallocate, preemption: 0/1 nodes are available: 1 No preemption victims found for incoming pod.
+   hog | Running | 
+   [0] | Running | 
+   repro-unschedulable-2xtqq | Pending | Unschedulable: 0/1 nodes are available: 1 Insufficient cpu. no new claims to deallocate, preemption: 0/1 nodes are available: 1 Preemption is not helpful for scheduling.
+=== 13:49:18 ===
+repro-configerror-klvsx | Running
+repro-imagepull-lgz66 | Running
+repro-invalidimage-6rltc | Running
+repro-nonzero-4b6m4 | Failed
+repro-oomkilled-cjt4z | Failed
+repro-recovery-s4z84 | Running
+repro-unschedulable-2xtqq | Running
+  --- nodes ---
+   repro-configerror-klvsx | Pending | CreateContainerConfigError: secret "does-not-exist" not found
+   repro-imagepull-lgz66 | Pending | ImagePullBackOff: Back-off pulling image "python:99.99.99-nonexistent": ErrImagePull: rpc error: code = NotFound desc = failed to pull and unpack image "docker.io/library/python:99.99.99-nonexistent": failed to resolve reference "docker.io/library/python:99.99.99-nonexistent": docker.io/library/python:99.99.99-nonexistent: not found
+   repro-invalidimage-6rltc | Pending | InvalidImageName: Failed to apply default image tag "THIS IS NOT A VALID IMAGE REFERENCE!!": couldn't parse image name "THIS IS NOT A VALID IMAGE REFERENCE!!": invalid reference format: repository name (library/THIS IS NOT A VALID IMAGE REFERENCE!!) must be lowercase
+   repro-nonzero-4b6m4 | Failed | main: Error (exit code 1)
+   repro-oomkilled-cjt4z | Failed | main: OOMKilled (exit code 137)
+   repro-recovery-s4z84 | Running | 
+   waiter | Pending | Unschedulable: 0/1 nodes are available: 1 Insufficient cpu. no new claims to deallocate, preemption: 0/1 nodes are available: 1 No preemption victims found for incoming pod.
+   hog | Running | 
+   [0] | Running | 
+   repro-unschedulable-2xtqq | Pending | Unschedulable: 0/1 nodes are available: 1 Insufficient cpu. no new claims to deallocate, preemption: 0/1 nodes are available: 1 Preemption is not helpful for scheduling.
+=== 13:49:29 ===
+repro-configerror-klvsx | Running
+repro-imagepull-lgz66 | Running
+repro-invalidimage-6rltc | Running
+repro-nonzero-4b6m4 | Failed
+repro-oomkilled-cjt4z | Failed
+repro-recovery-s4z84 | Running
+repro-unschedulable-2xtqq | Running
+  --- nodes ---
+   repro-configerror-klvsx | Pending | CreateContainerConfigError: secret "does-not-exist" not found
+   repro-imagepull-lgz66 | Pending | ImagePullBackOff: Back-off pulling image "python:99.99.99-nonexistent": ErrImagePull: rpc error: code = NotFound desc = failed to pull and unpack image "docker.io/library/python:99.99.99-nonexistent": failed to resolve reference "docker.io/library/python:99.99.99-nonexistent": docker.io/library/python:99.99.99-nonexistent: not found
+   repro-invalidimage-6rltc | Pending | InvalidImageName: Failed to apply default image tag "THIS IS NOT A VALID IMAGE REFERENCE!!": couldn't parse image name "THIS IS NOT A VALID IMAGE REFERENCE!!": invalid reference format: repository name (library/THIS IS NOT A VALID IMAGE REFERENCE!!) must be lowercase
+   repro-nonzero-4b6m4 | Failed | main: Error (exit code 1)
+   repro-oomkilled-cjt4z | Failed | main: OOMKilled (exit code 137)
+   repro-recovery-s4z84 | Running | 
+   waiter | Pending | Unschedulable: 0/1 nodes are available: 1 Insufficient cpu. no new claims to deallocate, preemption: 0/1 nodes are available: 1 No preemption victims found for incoming pod.
+   hog | Running | 
+   [0] | Running | 
+   repro-unschedulable-2xtqq | Pending | Unschedulable: 0/1 nodes are available: 1 Insufficient cpu. no new claims to deallocate, preemption: 0/1 nodes are available: 1 Preemption is not helpful for scheduling.
+=== 13:49:39 ===
+repro-configerror-klvsx | Running
+repro-imagepull-lgz66 | Running
+repro-invalidimage-6rltc | Running
+repro-nonzero-4b6m4 | Failed
+repro-oomkilled-cjt4z | Failed
+repro-recovery-s4z84 | Succeeded
+repro-unschedulable-2xtqq | Running
+  --- nodes ---
+   repro-configerror-klvsx | Pending | CreateContainerConfigError: secret "does-not-exist" not found
+   repro-imagepull-lgz66 | Pending | ImagePullBackOff: Back-off pulling image "python:99.99.99-nonexistent": ErrImagePull: rpc error: code = NotFound desc = failed to pull and unpack image "docker.io/library/python:99.99.99-nonexistent": failed to resolve reference "docker.io/library/python:99.99.99-nonexistent": docker.io/library/python:99.99.99-nonexistent: not found
+   repro-invalidimage-6rltc | Pending | InvalidImageName: Failed to apply default image tag "THIS IS NOT A VALID IMAGE REFERENCE!!": couldn't parse image name "THIS IS NOT A VALID IMAGE REFERENCE!!": invalid reference format: repository name (library/THIS IS NOT A VALID IMAGE REFERENCE!!) must be lowercase
+   repro-nonzero-4b6m4 | Failed | main: Error (exit code 1)
+   repro-oomkilled-cjt4z | Failed | main: OOMKilled (exit code 137)
+   waiter | Succeeded | 
+   hog | Succeeded | 
+   [0] | Succeeded | 
+   repro-recovery-s4z84 | Succeeded | 
+   repro-unschedulable-2xtqq | Pending | Unschedulable: 0/1 nodes are available: 1 Insufficient cpu. no new claims to deallocate, preemption: 0/1 nodes are available: 1 Preemption is not helpful for scheduling.
+=== 13:49:49 ===
+repro-configerror-klvsx | Running
+repro-imagepull-lgz66 | Running
+repro-invalidimage-6rltc | Running
+repro-nonzero-4b6m4 | Failed
+repro-oomkilled-cjt4z | Failed
+repro-recovery-s4z84 | Succeeded
+repro-unschedulable-2xtqq | Running
+  --- nodes ---
+   repro-configerror-klvsx | Pending | CreateContainerConfigError: secret "does-not-exist" not found
+   repro-imagepull-lgz66 | Pending | ImagePullBackOff: Back-off pulling image "python:99.99.99-nonexistent": ErrImagePull: rpc error: code = NotFound desc = failed to pull and unpack image "docker.io/library/python:99.99.99-nonexistent": failed to resolve reference "docker.io/library/python:99.99.99-nonexistent": docker.io/library/python:99.99.99-nonexistent: not found
+   repro-invalidimage-6rltc | Pending | InvalidImageName: Failed to apply default image tag "THIS IS NOT A VALID IMAGE REFERENCE!!": couldn't parse image name "THIS IS NOT A VALID IMAGE REFERENCE!!": invalid reference format: repository name (library/THIS IS NOT A VALID IMAGE REFERENCE!!) must be lowercase
+   repro-nonzero-4b6m4 | Failed | main: Error (exit code 1)
+   repro-oomkilled-cjt4z | Failed | main: OOMKilled (exit code 137)
+   repro-recovery-s4z84 | Succeeded | 
+   waiter | Succeeded | 
+   hog | Succeeded | 
+   [0] | Succeeded | 
+   repro-unschedulable-2xtqq | Pending | Unschedulable: 0/1 nodes are available: 1 Insufficient cpu. no new claims to deallocate, preemption: 0/1 nodes are available: 1 Preemption is not helpful for scheduling.
+=== 13:50:00 ===
+repro-configerror-klvsx | Running
+repro-imagepull-lgz66 | Running
+repro-invalidimage-6rltc | Running
+repro-nonzero-4b6m4 | Failed
+repro-oomkilled-cjt4z | Failed
+repro-recovery-s4z84 | Succeeded
+repro-unschedulable-2xtqq | Running
+  --- nodes ---
+   repro-configerror-klvsx | Pending | CreateContainerConfigError: secret "does-not-exist" not found
+   repro-imagepull-lgz66 | Pending | ImagePullBackOff: Back-off pulling image "python:99.99.99-nonexistent": ErrImagePull: rpc error: code = NotFound desc = failed to pull and unpack image "docker.io/library/python:99.99.99-nonexistent": failed to resolve reference "docker.io/library/python:99.99.99-nonexistent": docker.io/library/python:99.99.99-nonexistent: not found
+   repro-invalidimage-6rltc | Pending | InvalidImageName: Failed to apply default image tag "THIS IS NOT A VALID IMAGE REFERENCE!!": couldn't parse image name "THIS IS NOT A VALID IMAGE REFERENCE!!": invalid reference format: repository name (library/THIS IS NOT A VALID IMAGE REFERENCE!!) must be lowercase
+   repro-nonzero-4b6m4 | Failed | main: Error (exit code 1)
+   repro-oomkilled-cjt4z | Failed | main: OOMKilled (exit code 137)
+   repro-recovery-s4z84 | Succeeded | 
+   waiter | Succeeded | 
+   hog | Succeeded | 
+   [0] | Succeeded | 
+   repro-unschedulable-2xtqq | Pending | Unschedulable: 0/1 nodes are available: 1 Insufficient cpu. no new claims to deallocate, preemption: 0/1 nodes are available: 1 Preemption is not helpful for scheduling.
+=== 13:50:10 ===
+repro-configerror-klvsx | Running
+repro-imagepull-lgz66 | Running
+repro-invalidimage-6rltc | Running
+repro-nonzero-4b6m4 | Failed
+repro-oomkilled-cjt4z | Failed
+repro-recovery-s4z84 | Succeeded
+repro-unschedulable-2xtqq | Running
+  --- nodes ---
+   repro-configerror-klvsx | Pending | CreateContainerConfigError: secret "does-not-exist" not found
+   repro-imagepull-lgz66 | Pending | ImagePullBackOff: Back-off pulling image "python:99.99.99-nonexistent": ErrImagePull: rpc error: code = NotFound desc = failed to pull and unpack image "docker.io/library/python:99.99.99-nonexistent": failed to resolve reference "docker.io/library/python:99.99.99-nonexistent": docker.io/library/python:99.99.99-nonexistent: not found
+   repro-invalidimage-6rltc | Pending | InvalidImageName: Failed to apply default image tag "THIS IS NOT A VALID IMAGE REFERENCE!!": couldn't parse image name "THIS IS NOT A VALID IMAGE REFERENCE!!": invalid reference format: repository name (library/THIS IS NOT A VALID IMAGE REFERENCE!!) must be lowercase
+   repro-nonzero-4b6m4 | Failed | main: Error (exit code 1)
+   repro-oomkilled-cjt4z | Failed | main: OOMKilled (exit code 137)
+   hog | Succeeded | 
+   [0] | Succeeded | 
+   repro-recovery-s4z84 | Succeeded | 
+   waiter | Succeeded | 
+   repro-unschedulable-2xtqq | Pending | Unschedulable: 0/1 nodes are available: 1 Insufficient cpu. no new claims to deallocate, preemption: 0/1 nodes are available: 1 Preemption is not helpful for scheduling.
+=== 13:50:20 ===
+repro-configerror-klvsx | Running
+repro-imagepull-lgz66 | Running
+repro-invalidimage-6rltc | Running
+repro-nonzero-4b6m4 | Failed
+repro-oomkilled-cjt4z | Failed
+repro-recovery-s4z84 | Succeeded
+repro-unschedulable-2xtqq | Running
+  --- nodes ---
+   repro-configerror-klvsx | Pending | CreateContainerConfigError: secret "does-not-exist" not found
+   repro-imagepull-lgz66 | Pending | ImagePullBackOff: Back-off pulling image "python:99.99.99-nonexistent": ErrImagePull: rpc error: code = NotFound desc = failed to pull and unpack image "docker.io/library/python:99.99.99-nonexistent": failed to resolve reference "docker.io/library/python:99.99.99-nonexistent": docker.io/library/python:99.99.99-nonexistent: not found
+   repro-invalidimage-6rltc | Pending | InvalidImageName: Failed to apply default image tag "THIS IS NOT A VALID IMAGE REFERENCE!!": couldn't parse image name "THIS IS NOT A VALID IMAGE REFERENCE!!": invalid reference format: repository name (library/THIS IS NOT A VALID IMAGE REFERENCE!!) must be lowercase
+   repro-nonzero-4b6m4 | Failed | main: Error (exit code 1)
+   repro-oomkilled-cjt4z | Failed | main: OOMKilled (exit code 137)
+   waiter | Succeeded | 
+   hog | Succeeded | 
+   [0] | Succeeded | 
+   repro-recovery-s4z84 | Succeeded | 
+   repro-unschedulable-2xtqq | Pending | Unschedulable: 0/1 nodes are available: 1 Insufficient cpu. no new claims to deallocate, preemption: 0/1 nodes are available: 1 Preemption is not helpful for scheduling.
+=== 13:50:31 ===
+repro-configerror-klvsx | Running
+repro-imagepull-lgz66 | Running
+repro-invalidimage-6rltc | Running
+repro-nonzero-4b6m4 | Failed
+repro-oomkilled-cjt4z | Failed
+repro-recovery-s4z84 | Succeeded
+repro-unschedulable-2xtqq | Running
+  --- nodes ---
+   repro-configerror-klvsx | Pending | CreateContainerConfigError: secret "does-not-exist" not found
+   repro-imagepull-lgz66 | Pending | ImagePullBackOff: Back-off pulling image "python:99.99.99-nonexistent": ErrImagePull: rpc error: code = NotFound desc = failed to pull and unpack image "docker.io/library/python:99.99.99-nonexistent": failed to resolve reference "docker.io/library/python:99.99.99-nonexistent": docker.io/library/python:99.99.99-nonexistent: not found
+   repro-invalidimage-6rltc | Pending | InvalidImageName: Failed to apply default image tag "THIS IS NOT A VALID IMAGE REFERENCE!!": couldn't parse image name "THIS IS NOT A VALID IMAGE REFERENCE!!": invalid reference format: repository name (library/THIS IS NOT A VALID IMAGE REFERENCE!!) must be lowercase
+   repro-nonzero-4b6m4 | Failed | main: Error (exit code 1)
+   repro-oomkilled-cjt4z | Failed | main: OOMKilled (exit code 137)
+   repro-recovery-s4z84 | Succeeded | 
+   waiter | Succeeded | 
+   hog | Succeeded | 
+   [0] | Succeeded | 
+   repro-unschedulable-2xtqq | Pending | Unschedulable: 0/1 nodes are available: 1 Insufficient cpu. no new claims to deallocate, preemption: 0/1 nodes are available: 1 Preemption is not helpful for scheduling.
+=== 13:50:41 ===
+repro-configerror-klvsx | Running
+repro-imagepull-lgz66 | Running
+repro-invalidimage-6rltc | Running
+repro-nonzero-4b6m4 | Failed
+repro-oomkilled-cjt4z | Failed
+repro-recovery-s4z84 | Succeeded
+repro-unschedulable-2xtqq | Running
+  --- nodes ---
+   repro-configerror-klvsx | Pending | CreateContainerConfigError: secret "does-not-exist" not found
+   repro-imagepull-lgz66 | Pending | ImagePullBackOff: Back-off pulling image "python:99.99.99-nonexistent": ErrImagePull: rpc error: code = NotFound desc = failed to pull and unpack image "docker.io/library/python:99.99.99-nonexistent": failed to resolve reference "docker.io/library/python:99.99.99-nonexistent": docker.io/library/python:99.99.99-nonexistent: not found
+   repro-invalidimage-6rltc | Pending | InvalidImageName: Failed to apply default image tag "THIS IS NOT A VALID IMAGE REFERENCE!!": couldn't parse image name "THIS IS NOT A VALID IMAGE REFERENCE!!": invalid reference format: repository name (library/THIS IS NOT A VALID IMAGE REFERENCE!!) must be lowercase
+   repro-nonzero-4b6m4 | Failed | main: Error (exit code 1)
+   repro-oomkilled-cjt4z | Failed | main: OOMKilled (exit code 137)
+   repro-recovery-s4z84 | Succeeded | 
+   waiter | Succeeded | 
+   hog | Succeeded | 
+   [0] | Succeeded | 
+   repro-unschedulable-2xtqq | Pending | Unschedulable: 0/1 nodes are available: 1 Insufficient cpu. no new claims to deallocate, preemption: 0/1 nodes are available: 1 Preemption is not helpful for scheduling.
+=== 13:50:51 ===
+repro-configerror-klvsx | Running
+repro-imagepull-lgz66 | Running
+repro-invalidimage-6rltc | Running
+repro-nonzero-4b6m4 | Failed
+repro-oomkilled-cjt4z | Failed
+repro-recovery-s4z84 | Succeeded
+repro-unschedulable-2xtqq | Running
+  --- nodes ---
+   repro-configerror-klvsx | Pending | CreateContainerConfigError: secret "does-not-exist" not found
+   repro-imagepull-lgz66 | Pending | ImagePullBackOff: Back-off pulling image "python:99.99.99-nonexistent": ErrImagePull: rpc error: code = NotFound desc = failed to pull and unpack image "docker.io/library/python:99.99.99-nonexistent": failed to resolve reference "docker.io/library/python:99.99.99-nonexistent": docker.io/library/python:99.99.99-nonexistent: not found
+   repro-invalidimage-6rltc | Pending | InvalidImageName: Failed to apply default image tag "THIS IS NOT A VALID IMAGE REFERENCE!!": couldn't parse image name "THIS IS NOT A VALID IMAGE REFERENCE!!": invalid reference format: repository name (library/THIS IS NOT A VALID IMAGE REFERENCE!!) must be lowercase
+   repro-nonzero-4b6m4 | Failed | main: Error (exit code 1)
+   repro-oomkilled-cjt4z | Failed | main: OOMKilled (exit code 137)
+   hog | Succeeded | 
+   [0] | Succeeded | 
+   repro-recovery-s4z84 | Succeeded | 
+   waiter | Succeeded | 
+   repro-unschedulable-2xtqq | Pending | Unschedulable: 0/1 nodes are available: 1 Insufficient cpu. no new claims to deallocate, preemption: 0/1 nodes are available: 1 Preemption is not helpful for scheduling.
+=== 13:51:01 ===
+repro-configerror-klvsx | Running
+repro-imagepull-lgz66 | Running
+repro-invalidimage-6rltc | Running
+repro-nonzero-4b6m4 | Failed
+repro-oomkilled-cjt4z | Failed
+repro-recovery-s4z84 | Succeeded
+repro-unschedulable-2xtqq | Running
+  --- nodes ---
+   repro-configerror-klvsx | Pending | CreateContainerConfigError: secret "does-not-exist" not found
+   repro-imagepull-lgz66 | Pending | ErrImagePull: rpc error: code = NotFound desc = failed to pull and unpack image "docker.io/library/python:99.99.99-nonexistent": failed to resolve reference "docker.io/library/python:99.99.99-nonexistent": docker.io/library/python:99.99.99-nonexistent: not found
+   repro-invalidimage-6rltc | Pending | InvalidImageName: Failed to apply default image tag "THIS IS NOT A VALID IMAGE REFERENCE!!": couldn't parse image name "THIS IS NOT A VALID IMAGE REFERENCE!!": invalid reference format: repository name (library/THIS IS NOT A VALID IMAGE REFERENCE!!) must be lowercase
+   repro-nonzero-4b6m4 | Failed | main: Error (exit code 1)
+   repro-oomkilled-cjt4z | Failed | main: OOMKilled (exit code 137)
+   repro-recovery-s4z84 | Succeeded | 
+   waiter | Succeeded | 
+   hog | Succeeded | 
+   [0] | Succeeded | 
+   repro-unschedulable-2xtqq | Pending | Unschedulable: 0/1 nodes are available: 1 Insufficient cpu. no new claims to deallocate, preemption: 0/1 nodes are available: 1 Preemption is not helpful for scheduling.
+=== 13:51:12 ===
+repro-configerror-klvsx | Running
+repro-imagepull-lgz66 | Running
+repro-invalidimage-6rltc | Running
+repro-nonzero-4b6m4 | Failed
+repro-oomkilled-cjt4z | Failed
+repro-recovery-s4z84 | Succeeded
+repro-unschedulable-2xtqq | Running
+  --- nodes ---
+   repro-configerror-klvsx | Pending | CreateContainerConfigError: secret "does-not-exist" not found
+   repro-imagepull-lgz66 | Pending | ImagePullBackOff: Back-off pulling image "python:99.99.99-nonexistent": ErrImagePull: rpc error: code = NotFound desc = failed to pull and unpack image "docker.io/library/python:99.99.99-nonexistent": failed to resolve reference "docker.io/library/python:99.99.99-nonexistent": docker.io/library/python:99.99.99-nonexistent: not found
+   repro-invalidimage-6rltc | Pending | InvalidImageName: Failed to apply default image tag "THIS IS NOT A VALID IMAGE REFERENCE!!": couldn't parse image name "THIS IS NOT A VALID IMAGE REFERENCE!!": invalid reference format: repository name (library/THIS IS NOT A VALID IMAGE REFERENCE!!) must be lowercase
+   repro-nonzero-4b6m4 | Failed | main: Error (exit code 1)
+   repro-oomkilled-cjt4z | Failed | main: OOMKilled (exit code 137)
+   repro-recovery-s4z84 | Succeeded | 
+   waiter | Succeeded | 
+   hog | Succeeded | 
+   [0] | Succeeded | 
+   repro-unschedulable-2xtqq | Pending | Unschedulable: 0/1 nodes are available: 1 Insufficient cpu. no new claims to deallocate, preemption: 0/1 nodes are available: 1 Preemption is not helpful for scheduling.
+=== 13:51:22 ===
+repro-configerror-klvsx | Running
+repro-imagepull-lgz66 | Running
+repro-invalidimage-6rltc | Running
+repro-nonzero-4b6m4 | Failed
+repro-oomkilled-cjt4z | Failed
+repro-recovery-s4z84 | Succeeded
+repro-unschedulable-2xtqq | Running
+  --- nodes ---
+   repro-configerror-klvsx | Pending | CreateContainerConfigError: secret "does-not-exist" not found
+   repro-imagepull-lgz66 | Pending | ImagePullBackOff: Back-off pulling image "python:99.99.99-nonexistent": ErrImagePull: rpc error: code = NotFound desc = failed to pull and unpack image "docker.io/library/python:99.99.99-nonexistent": failed to resolve reference "docker.io/library/python:99.99.99-nonexistent": docker.io/library/python:99.99.99-nonexistent: not found
+   repro-invalidimage-6rltc | Pending | InvalidImageName: Failed to apply default image tag "THIS IS NOT A VALID IMAGE REFERENCE!!": couldn't parse image name "THIS IS NOT A VALID IMAGE REFERENCE!!": invalid reference format: repository name (library/THIS IS NOT A VALID IMAGE REFERENCE!!) must be lowercase
+   repro-nonzero-4b6m4 | Failed | main: Error (exit code 1)
+   repro-oomkilled-cjt4z | Failed | main: OOMKilled (exit code 137)
+   repro-recovery-s4z84 | Succeeded | 
+   waiter | Succeeded | 
+   hog | Succeeded | 
+   [0] | Succeeded | 
+   repro-unschedulable-2xtqq | Pending | Unschedulable: 0/1 nodes are available: 1 Insufficient cpu. no new claims to deallocate, preemption: 0/1 nodes are available: 1 Preemption is not helpful for scheduling.
+=== 13:51:32 ===
+repro-configerror-klvsx | Running
+repro-imagepull-lgz66 | Running
+repro-invalidimage-6rltc | Running
+repro-nonzero-4b6m4 | Failed
+repro-oomkilled-cjt4z | Failed
+repro-recovery-s4z84 | Succeeded
+repro-unschedulable-2xtqq | Running
+  --- nodes ---
+   repro-configerror-klvsx | Pending | CreateContainerConfigError: secret "does-not-exist" not found
+   repro-imagepull-lgz66 | Pending | ImagePullBackOff: Back-off pulling image "python:99.99.99-nonexistent": ErrImagePull: rpc error: code = NotFound desc = failed to pull and unpack image "docker.io/library/python:99.99.99-nonexistent": failed to resolve reference "docker.io/library/python:99.99.99-nonexistent": docker.io/library/python:99.99.99-nonexistent: not found
+   repro-invalidimage-6rltc | Pending | InvalidImageName: Failed to apply default image tag "THIS IS NOT A VALID IMAGE REFERENCE!!": couldn't parse image name "THIS IS NOT A VALID IMAGE REFERENCE!!": invalid reference format: repository name (library/THIS IS NOT A VALID IMAGE REFERENCE!!) must be lowercase
+   repro-nonzero-4b6m4 | Failed | main: Error (exit code 1)
+   repro-oomkilled-cjt4z | Failed | main: OOMKilled (exit code 137)
+   repro-recovery-s4z84 | Succeeded | 
+   waiter | Succeeded | 
+   hog | Succeeded | 
+   [0] | Succeeded | 
+   repro-unschedulable-2xtqq | Pending | Unschedulable: 0/1 nodes are available: 1 Insufficient cpu. no new claims to deallocate, preemption: 0/1 nodes are available: 1 Preemption is not helpful for scheduling.
+=== 13:51:43 ===
+repro-configerror-klvsx | Running
+repro-imagepull-lgz66 | Running
+repro-invalidimage-6rltc | Running
+repro-nonzero-4b6m4 | Failed
+repro-oomkilled-cjt4z | Failed
+repro-recovery-s4z84 | Succeeded
+repro-unschedulable-2xtqq | Running
+  --- nodes ---
+   repro-configerror-klvsx | Pending | CreateContainerConfigError: secret "does-not-exist" not found
+   repro-imagepull-lgz66 | Pending | ImagePullBackOff: Back-off pulling image "python:99.99.99-nonexistent": ErrImagePull: rpc error: code = NotFound desc = failed to pull and unpack image "docker.io/library/python:99.99.99-nonexistent": failed to resolve reference "docker.io/library/python:99.99.99-nonexistent": docker.io/library/python:99.99.99-nonexistent: not found
+   repro-invalidimage-6rltc | Pending | InvalidImageName: Failed to apply default image tag "THIS IS NOT A VALID IMAGE REFERENCE!!": couldn't parse image name "THIS IS NOT A VALID IMAGE REFERENCE!!": invalid reference format: repository name (library/THIS IS NOT A VALID IMAGE REFERENCE!!) must be lowercase
+   repro-nonzero-4b6m4 | Failed | main: Error (exit code 1)
+   repro-oomkilled-cjt4z | Failed | main: OOMKilled (exit code 137)
+   repro-recovery-s4z84 | Succeeded | 
+   waiter | Succeeded | 
+   hog | Succeeded | 
+   [0] | Succeeded | 
+   repro-unschedulable-2xtqq | Pending | Unschedulable: 0/1 nodes are available: 1 Insufficient cpu. no new claims to deallocate, preemption: 0/1 nodes are available: 1 Preemption is not helpful for scheduling.

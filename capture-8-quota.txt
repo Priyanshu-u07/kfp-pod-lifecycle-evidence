@@ -1,0 +1,18 @@
+################ ARGO NODES ################
+displayName | type | phase | message
+-------------------------------------------
+repro-imagepull-5zflx | Pod | Pending | pods "repro-imagepull-5zflx" is forbidden: exceeded quota: no-pods, requested: pods=1, used: pods=0, limited: pods=0
+
+################ WORKFLOW-LEVEL ################
+phase=Running
+message=
+startedAt=2026-08-10T03:02:31Z
+
+################ POD STATUS ################
+
+################ EVENTS ################
+TYPE   REASON   OBJ   MSG
+
+################ VERSIONS ################
+    "gitVersion": "v1.34.1",
+    "gitVersion": "v1.35.0",

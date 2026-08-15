@@ -1,0 +1,44 @@
+# Scenario 7: THE RECOVERY TEST -- does Unschedulable actually resolve on its own?
+#
+# Two steps run in PARALLEL, each requesting 3 CPU on a node that has ~4.
+#   - "hog" gets scheduled first and sleeps 90s
+#   - "waiter" cannot fit, so it sits Unschedulable
+#   - when hog finishes, capacity frees and waiter should schedule and succeed
+#
+# This is the empirical basis for the transient/terminal distinction. That Unschedulable
+# can resolve without user action is widely assumed; this scenario tests it directly.
+#
+# It also answers a second question: does the node message CLEAR when the pod finally
+# runs, or does the stale failure text persist on the node?
+#
+# NOTE: if your kind node has fewer than 4 CPUs, lower both requests (e.g. 1500m each
+# on a 2-CPU node). Check with:  kubectl get node -o jsonpath='{.items[0].status.allocatable.cpu}'
+apiVersion: argoproj.io/v1alpha1
+kind: Workflow
+metadata:
+  generateName: repro-recovery-
+spec:
+  entrypoint: main
+  templates:
+    - name: main
+      steps:
+        - - name: hog
+            template: hog
+          - name: waiter
+            template: waiter
+
+    - name: hog
+      container:
+        image: python:3.11-slim
+        command: ["python", "-c", "import time; print('holding cpu'); time.sleep(90); print('done')"]
+        resources:
+          requests:
+            cpu: "3"
+
+    - name: waiter
+      container:
+        image: python:3.11-slim
+        command: ["python", "-c", "print('finally scheduled')"]
+        resources:
+          requests:
+            cpu: "3"

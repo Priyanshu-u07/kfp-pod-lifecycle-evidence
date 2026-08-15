@@ -1,0 +1,30 @@
+=== 03:14:49 ===
+repro-imagepull-6hvs5 | Running
+repro-imagepull-6hvs5   1/2   ImagePullBackOff   0     47s
+=== 03:14:59 ===
+repro-imagepull-6hvs5 | Running
+repro-imagepull-6hvs5   1/2   ImagePullBackOff   0     57s
+=== 03:15:09 ===
+repro-imagepull-6hvs5 | Running
+repro-imagepull-6hvs5   1/2   ErrImagePull   0     68s
+=== 03:15:20 ===
+repro-imagepull-6hvs5 | Running
+repro-imagepull-6hvs5   1/2   ImagePullBackOff   0     78s
+=== 03:15:30 ===
+repro-imagepull-6hvs5 | Running
+repro-imagepull-6hvs5   1/2   ImagePullBackOff   0     88s
+=== 03:15:40 ===
+repro-imagepull-6hvs5 | Running
+repro-imagepull-6hvs5   1/2   ImagePullBackOff   0     99s
+=== 03:15:51 ===
+repro-imagepull-6hvs5 | Running
+repro-imagepull-6hvs5   1/2   ImagePullBackOff   0     109s
+=== 03:16:01 ===
+repro-imagepull-6hvs5 | Running
+repro-imagepull-6hvs5   1/2   ErrImagePull   0     119s
+=== 03:16:11 ===
+repro-imagepull-6hvs5 | Running
+repro-imagepull-6hvs5   1/2   ImagePullBackOff   0     2m9s
+=== 03:16:21 ===
+repro-imagepull-6hvs5 | Running
+repro-imagepull-6hvs5   1/2   ImagePullBackOff   0     2m20s

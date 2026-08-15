@@ -1,0 +1,52 @@
+################ ARGO NODES ################
+displayName | type | phase | message
+-------------------------------------------
+repro-imagepull-lgz66 | Pod | Pending | ImagePullBackOff: Back-off pulling image "python:99.99.99-nonexistent": ErrImagePull: rpc error: code = NotFound desc = failed to pull and unpack image "docker.io/library/python:99.99.99-nonexistent": failed to resolve reference "docker.io/library/python:99.99.99-nonexistent": docker.io/library/python:99.99.99-nonexistent: not found
+
+################ WORKFLOW-LEVEL ################
+phase=Running
+message=
+startedAt=2026-08-09T13:18:46Z
+
+################ POD STATUS ################
+--- pod: repro-imagepull-lgz66
+  phase=Pending
+  conditions (type / status / reason):
+    PodReadyToStartContainers / True / 
+    Initialized / True / 
+    Ready / False / ContainersNotReady
+    ContainersReady / False / ContainersNotReady
+    PodScheduled / True / 
+  containerStatuses (name / waiting.reason / terminated.reason):
+    main / ImagePullBackOff / 
+    wait /  / 
+  waiting.message:
+    Back-off pulling image "python:99.99.99-nonexistent": ErrImagePull: rpc error: code = NotFound desc = failed to pull and unpack image "docker.io/library/python:99.99.99-nonexistent": failed to resolve reference "docker.io/library/python:99.99.99-nonexistent": docker.io/library/python:99.99.99-nonexistent: not found
+    
+
+################ EVENTS ################
+Normal    Started            repro-imagepull-lgz66                  Container started
+Normal    Pulled             repro-oomkilled-cjt4z                  Successfully pulled image "quay.io/argoproj/argoexec:v4.0.4" in 915ms (17.018s including waiting). Image size: 67091381 bytes.
+Normal    Created            repro-oomkilled-cjt4z                  Container created
+Normal    Started            repro-oomkilled-cjt4z                  Container started
+Normal    Started            repro-imagepull-lgz66                  Container started
+Normal    Pulled             repro-imagepull-lgz66                  Container image "quay.io/argoproj/argoexec:v4.0.4" already present on machine and can be accessed by the pod
+Normal    Created            repro-imagepull-lgz66                  Container created
+Normal    Pulled             repro-oomkilled-cjt4z                  Container image "quay.io/argoproj/argoexec:v4.0.4" already present on machine and can be accessed by the pod
+Normal    Created            repro-oomkilled-cjt4z                  Container created
+Normal    Started            repro-oomkilled-cjt4z                  Container started
+Normal    Pulling            repro-oomkilled-cjt4z                  Pulling image "python:3.11-slim"
+Normal    Pulled             repro-oomkilled-cjt4z                  Successfully pulled image "python:3.11-slim" in 15.531s (16.571s including waiting). Image size: 45538343 bytes.
+Normal    Created            repro-oomkilled-cjt4z                  Container created
+Normal    Started            repro-oomkilled-cjt4z                  Container started
+Normal    Pulling            repro-imagepull-lgz66                  Pulling image "python:99.99.99-nonexistent"
+Warning   Failed             repro-imagepull-lgz66                  Failed to pull image "python:99.99.99-nonexistent": rpc error: code = NotFound desc = failed to pull and unpack image "docker.io/library/python:99.99.99-nonexistent": failed to resolve reference "docker.io/library/python:99.99.99-nonexistent": docker.io/library/python:99.99.99-nonexistent: not found
+Warning   Failed             repro-imagepull-lgz66                  Error: ErrImagePull
+Normal    BackOff            repro-imagepull-lgz66                  Back-off pulling image "python:99.99.99-nonexistent"
+Warning   Failed             repro-imagepull-lgz66                  Error: ImagePullBackOff
+Warning   FailedScheduling   repro-unschedulable-2xtqq              0/1 nodes are available: 1 Insufficient cpu. no new claims to deallocate, preemption: 0/1 nodes are available: 1 Preemption is not helpful for scheduling.
+
+################ VERSIONS ################
+    "gitVersion": "v1.34.1",
+    "gitVersion": "v1.35.0",
+argo-controller-image=quay.io/argoproj/workflow-controller:v4.0.4

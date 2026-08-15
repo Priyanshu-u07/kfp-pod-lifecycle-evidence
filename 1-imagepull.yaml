@@ -1,0 +1,14 @@
+# Scenario 1: ImagePullBackOff  (Provisioning / Deadline)
+# The image tag does not exist, so the kubelet retries the pull with backoff forever.
+# Expect: node.Phase stays Pending, node.Message carries the pull failure.
+apiVersion: argoproj.io/v1alpha1
+kind: Workflow
+metadata:
+  generateName: repro-imagepull-
+spec:
+  entrypoint: main
+  templates:
+    - name: main
+      container:
+        image: python:99.99.99-nonexistent
+        command: ["python", "-c", "print('never runs')"]

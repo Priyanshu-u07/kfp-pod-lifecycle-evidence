@@ -1,0 +1,6 @@
+# restartPolicy on Argo workflow pods — captured 2026-08-10T15:59:49Z
+# Argo Workflows 4.0.4 / Kubernetes 1.35.0
+
+repro-oomkilled-cjt4z: Never
+repro-nonzero-4b6m4: Never
+repro-imagepull-lgz66: Never

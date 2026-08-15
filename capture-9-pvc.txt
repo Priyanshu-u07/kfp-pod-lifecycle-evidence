@@ -1,0 +1,34 @@
+################ ARGO NODES ################
+displayName | type | phase | message
+-------------------------------------------
+repro-pvc-zr8mr | Pod | Pending | Unschedulable: 0/1 nodes are available: pod has unbound immediate PersistentVolumeClaims. not found
+
+################ WORKFLOW-LEVEL ################
+phase=Running
+message=
+startedAt=2026-08-13T21:05:04Z
+
+################ POD STATUS ################
+--- pod: repro-pvc-zr8mr
+  phase=Pending
+  conditions (type / status / reason):
+    PodScheduled / False / Unschedulable
+  containerStatuses (name / waiting.reason / terminated.reason):
+  waiting.message:
+
+################ EVENTS ################
+TYPE      REASON             OBJ                         MSG
+Warning   FailedScheduling   repro-pvc-zr8mr             0/1 nodes are available: pod has unbound immediate PersistentVolumeClaims. not found
+Warning   FailedScheduling   repro-unschedulable-2xtqq   0/1 nodes are available: 1 Insufficient cpu. no new claims to deallocate, preemption: 0/1 nodes are available: 1 Preemption is not helpful for scheduling.
+Normal    Pulling            repro-imagepull-lgz66       Pulling image "python:99.99.99-nonexistent"
+Warning   Failed             repro-imagepull-lgz66       Failed to pull image "python:99.99.99-nonexistent": rpc error: code = NotFound desc = failed to pull and unpack image "docker.io/library/python:99.99.99-nonexistent": failed to resolve reference "docker.io/library/python:99.99.99-nonexistent": docker.io/library/python:99.99.99-nonexistent: not found
+Warning   InspectFailed      repro-invalidimage-6rltc    Failed to apply default image tag "THIS IS NOT A VALID IMAGE REFERENCE!!": couldn't parse image name "THIS IS NOT A VALID IMAGE REFERENCE!!": invalid reference format: repository name (library/THIS IS NOT A VALID IMAGE REFERENCE!!) must be lowercase
+Normal    Pulled             repro-configerror-klvsx     Container image "python:3.11-slim" already present on machine and can be accessed by the pod
+Warning   Failed             repro-configerror-klvsx     Error: secret "does-not-exist" not found
+Normal    BackOff            repro-imagepull-lgz66       Back-off pulling image "python:99.99.99-nonexistent"
+Warning   Failed             repro-imagepull-lgz66       Error: ImagePullBackOff
+
+################ VERSIONS ################
+    "gitVersion": "v1.34.1",
+    "gitVersion": "v1.35.0",
+argo-controller-image=quay.io/argoproj/workflow-controller:v4.0.4

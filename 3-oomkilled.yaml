@@ -1,0 +1,21 @@
+# Scenario 3: OOMKilled  (Runtime)
+# The container starts, then allocates ~500MB against a 64Mi limit and is killed by the kernel.
+# Unlike 1 and 2 the container DOES run, so this exercises
+# state.terminated.reason rather than state.waiting.reason.
+# Key question: does OOMKilled reach node.Message at all, or only the pod object?
+apiVersion: argoproj.io/v1alpha1
+kind: Workflow
+metadata:
+  generateName: repro-oomkilled-
+spec:
+  entrypoint: main
+  templates:
+    - name: main
+      container:
+        image: python:3.11-slim
+        command: ["python", "-c", "a = bytearray(500 * 1024 * 1024); print(len(a))"]
+        resources:
+          requests:
+            memory: "64Mi"
+          limits:
+            memory: "64Mi"

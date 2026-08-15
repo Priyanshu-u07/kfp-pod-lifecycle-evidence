@@ -1,0 +1,69 @@
+################ ARGO NODES ################
+displayName | type | phase | message
+-------------------------------------------
+[0] | StepGroup | Succeeded | 
+repro-recovery-s4z84 | Steps | Succeeded | 
+waiter | Pod | Succeeded | 
+hog | Pod | Succeeded | 
+
+################ WORKFLOW-LEVEL ################
+phase=Succeeded
+message=
+startedAt=2026-08-09T13:47:52Z
+
+################ POD STATUS ################
+--- pod: repro-recovery-s4z84-hog-3859866015
+  phase=Succeeded
+  conditions (type / status / reason):
+    PodReadyToStartContainers / False / 
+    Initialized / True / PodCompleted
+    Ready / False / PodCompleted
+    ContainersReady / False / PodCompleted
+    PodScheduled / True / 
+  containerStatuses (name / waiting.reason / terminated.reason):
+    main /  / Completed
+    wait /  / Completed
+  waiting.message:
+    
+    
+--- pod: repro-recovery-s4z84-waiter-33228229
+  phase=Succeeded
+  conditions (type / status / reason):
+    PodReadyToStartContainers / False / 
+    Initialized / True / PodCompleted
+    Ready / False / PodCompleted
+    ContainersReady / False / PodCompleted
+    PodScheduled / True / 
+  containerStatuses (name / waiting.reason / terminated.reason):
+    main /  / Completed
+    wait /  / Completed
+  waiting.message:
+    
+    
+
+################ EVENTS ################
+Normal    Created            repro-recovery-s4z84-hog-3859866015    Container created
+Normal    Pulled             repro-recovery-s4z84-hog-3859866015    Container image "quay.io/argoproj/argoexec:v4.0.4" already present on machine and can be accessed by the pod
+Warning   FailedScheduling   repro-recovery-s4z84-waiter-33228229   0/1 nodes are available: 1 Insufficient cpu. no new claims to deallocate, preemption: 0/1 nodes are available: 1 No preemption victims found for incoming pod.
+Normal    BackOff            repro-imagepull-lgz66                  Back-off pulling image "python:99.99.99-nonexistent"
+Warning   Failed             repro-imagepull-lgz66                  Error: ImagePullBackOff
+Normal    Scheduled          repro-recovery-s4z84-waiter-33228229   Successfully assigned argo/repro-recovery-s4z84-waiter-33228229 to argo-only-control-plane
+Normal    Pulled             repro-recovery-s4z84-waiter-33228229   Container image "quay.io/argoproj/argoexec:v4.0.4" already present on machine and can be accessed by the pod
+Normal    Started            repro-recovery-s4z84-waiter-33228229   Container started
+Normal    Created            repro-recovery-s4z84-waiter-33228229   Container created
+Normal    Started            repro-recovery-s4z84-waiter-33228229   Container started
+Normal    Pulled             repro-recovery-s4z84-waiter-33228229   Container image "python:3.11-slim" already present on machine and can be accessed by the pod
+Normal    Created            repro-recovery-s4z84-waiter-33228229   Container created
+Normal    Pulled             repro-recovery-s4z84-waiter-33228229   Container image "quay.io/argoproj/argoexec:v4.0.4" already present on machine and can be accessed by the pod
+Normal    Started            repro-recovery-s4z84-waiter-33228229   Container started
+Normal    Created            repro-recovery-s4z84-waiter-33228229   Container created
+Warning   FailedScheduling   repro-unschedulable-2xtqq              0/1 nodes are available: 1 Insufficient cpu. no new claims to deallocate, preemption: 0/1 nodes are available: 1 Preemption is not helpful for scheduling.
+Warning   Failed             repro-invalidimage-6rltc               Error: InvalidImageName
+Normal    Pulled             repro-configerror-klvsx                Container image "python:3.11-slim" already present on machine and can be accessed by the pod
+Warning   InspectFailed      repro-invalidimage-6rltc               Failed to apply default image tag "THIS IS NOT A VALID IMAGE REFERENCE!!": couldn't parse image name "THIS IS NOT A VALID IMAGE REFERENCE!!": invalid reference format: repository name (library/THIS IS NOT A VALID IMAGE REFERENCE!!) must be lowercase
+Warning   Failed             repro-configerror-klvsx                Error: secret "does-not-exist" not found
+
+################ VERSIONS ################
+    "gitVersion": "v1.34.1",
+    "gitVersion": "v1.35.0",
+argo-controller-image=quay.io/argoproj/workflow-controller:v4.0.4

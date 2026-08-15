@@ -1,0 +1,15 @@
+FIRST                  LAST                   COUNT   REASON            MESSAGE
+2026-08-09T13:18:46Z   2026-08-09T13:18:46Z   1       WorkflowRunning   Workflow Running
+2026-08-09T13:18:46Z   2026-08-09T13:18:46Z   1       Scheduled         Successfully assigned argo/repro-imagepull-lgz66 to argo-only-control-plane
+2026-08-09T13:18:46Z   2026-08-09T13:18:46Z   1       Pulling           Pulling image "quay.io/argoproj/argoexec:v4.0.4"
+2026-08-09T13:19:03Z   2026-08-09T13:19:03Z   1       Pulled            Successfully pulled image "quay.io/argoproj/argoexec:v4.0.4" in 16.813s (16.813s including waiting). Image size: 67091381 bytes.
+2026-08-09T13:19:03Z   2026-08-09T13:19:03Z   1       Created           Container created
+2026-08-09T13:19:03Z   2026-08-09T13:19:03Z   1       Started           Container started
+2026-08-09T13:19:05Z   2026-08-09T13:19:05Z   1       Pulled            Container image "quay.io/argoproj/argoexec:v4.0.4" already present on machine and can be accessed by the pod
+2026-08-09T13:19:05Z   2026-08-09T13:19:05Z   1       Created           Container created
+2026-08-09T13:19:05Z   2026-08-09T13:19:05Z   1       Started           Container started
+2026-08-09T13:19:05Z   2026-08-09T13:22:03Z   5       Pulling           Pulling image "python:99.99.99-nonexistent"
+2026-08-09T13:19:07Z   2026-08-09T13:22:04Z   5       Failed            Failed to pull image "python:99.99.99-nonexistent": rpc error: code = NotFound desc = failed to pull and unpack image "docker.io/library/python:99.99.99-nonexistent": failed to resolve reference "docker.io/library/python:99.99.99-nonexistent": docker.io/library/python:99.99.99-nonexistent: not found
+2026-08-09T13:19:07Z   2026-08-09T13:22:04Z   5       Failed            Error: ErrImagePull
+2026-08-09T13:19:08Z   2026-08-09T13:33:48Z   63      BackOff           Back-off pulling image "python:99.99.99-nonexistent"
+2026-08-09T13:19:08Z   2026-08-09T13:29:16Z   43      Failed            Error: ImagePullBackOff

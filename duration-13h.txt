@@ -1,0 +1,9 @@
+OBSERVED AT 02:55:17 UTC — 13h after submission at 2026-08-09 13:18:45 UTC
+NAME                        STATUS      AGE   MESSAGE
+repro-configerror-klvsx     Running     13h   
+repro-imagepull-lgz66       Running     13h   
+repro-invalidimage-6rltc    Running     13h   
+repro-nonzero-4b6m4         Failed      13h   main: Error (exit code 1)
+repro-oomkilled-cjt4z       Failed      13h   main: OOMKilled (exit code 137)
+repro-recovery-s4z84        Succeeded   13h   
+repro-unschedulable-2xtqq   Running     13h   

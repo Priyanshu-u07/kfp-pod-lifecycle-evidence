@@ -1,0 +1,16 @@
+# Scenario 4: container exits non-zero, repeatedly failing command
+# QUESTION: does this ever become CrashLoopBackOff, or does Argo's restartPolicy: Never
+# mean the container fails exactly once and CrashLoopBackOff is unreachable for
+# workflow pods? If unreachable, every taxonomy listing CrashLoopBackOff is describing
+# a state KFP cannot produce.
+apiVersion: argoproj.io/v1alpha1
+kind: Workflow
+metadata:
+  generateName: repro-nonzero-
+spec:
+  entrypoint: main
+  templates:
+    - name: main
+      container:
+        image: python:3.11-slim
+        command: ["python", "-c", "import sys; print('crashing'); sys.exit(1)"]

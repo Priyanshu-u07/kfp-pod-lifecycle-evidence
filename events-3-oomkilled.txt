@@ -1,0 +1,17 @@
+FIRST                  LAST                   COUNT   REASON                MESSAGE
+2026-08-09T13:18:47Z   2026-08-09T13:18:47Z   1       WorkflowRunning       Workflow Running
+2026-08-09T13:18:47Z   2026-08-09T13:18:47Z   1       Scheduled             Successfully assigned argo/repro-oomkilled-cjt4z to argo-only-control-plane
+2026-08-09T13:18:47Z   2026-08-09T13:18:47Z   1       Pulling               Pulling image "quay.io/argoproj/argoexec:v4.0.4"
+2026-08-09T13:19:04Z   2026-08-09T13:19:04Z   1       Pulled                Successfully pulled image "quay.io/argoproj/argoexec:v4.0.4" in 915ms (17.018s including waiting). Image size: 67091381 bytes.
+2026-08-09T13:19:04Z   2026-08-09T13:19:04Z   1       Created               Container created
+2026-08-09T13:19:04Z   2026-08-09T13:19:04Z   1       Started               Container started
+2026-08-09T13:19:06Z   2026-08-09T13:19:06Z   1       Pulled                Container image "quay.io/argoproj/argoexec:v4.0.4" already present on machine and can be accessed by the pod
+2026-08-09T13:19:06Z   2026-08-09T13:19:06Z   1       Created               Container created
+2026-08-09T13:19:06Z   2026-08-09T13:19:06Z   1       Started               Container started
+2026-08-09T13:19:06Z   2026-08-09T13:19:06Z   1       Pulling               Pulling image "python:3.11-slim"
+2026-08-09T13:19:22Z   2026-08-09T13:19:22Z   1       Pulled                Successfully pulled image "python:3.11-slim" in 15.531s (16.571s including waiting). Image size: 45538343 bytes.
+2026-08-09T13:19:22Z   2026-08-09T13:19:22Z   1       Created               Container created
+2026-08-09T13:19:23Z   2026-08-09T13:19:23Z   1       Started               Container started
+2026-08-09T13:19:33Z   2026-08-09T13:19:33Z   1       WorkflowNodeRunning   Running node repro-oomkilled-cjt4z
+2026-08-09T13:19:43Z   2026-08-09T13:19:43Z   1       WorkflowFailed        main: OOMKilled (exit code 137)
+2026-08-09T13:19:43Z   2026-08-09T13:19:43Z   1       WorkflowNodeFailed    Failed node repro-oomkilled-cjt4z: main: OOMKilled (exit code 137)

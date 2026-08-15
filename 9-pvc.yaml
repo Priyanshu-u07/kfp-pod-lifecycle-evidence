@@ -1,0 +1,44 @@
+# Scenario 9: unbound PVC (invalid storage class)
+#
+# An invalid storage class in a PVC is a natural candidate to fail early: it is almost
+# always user error, and unlike a capacity shortfall it cannot resolve on its own.
+#
+# The PVC references a storage class that does not exist, so it never binds. The pod is
+# created but never scheduled, because the scheduler will not place a pod with an unbound
+# immediate PVC.
+#
+# QUESTION: what does Argo write to node.Message? If it surfaces as an Unschedulable
+# variant rather than a distinct reason, volume failures are a sub-case of the
+# provisioning category rather than a category of their own — which changes whether the
+# taxonomy needs a new row or a new reason under an existing one.
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: bad-storage-class
+spec:
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: does-not-exist
+  resources:
+    requests:
+      storage: 1Gi
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Workflow
+metadata:
+  generateName: repro-pvc-
+spec:
+  entrypoint: main
+  volumes:
+    - name: data
+      persistentVolumeClaim:
+        claimName: bad-storage-class
+  templates:
+    - name: main
+      container:
+        image: python:3.11-slim
+        command: ["python", "-c", "print('never runs')"]
+        volumeMounts:
+          - name: data
+            mountPath: /data

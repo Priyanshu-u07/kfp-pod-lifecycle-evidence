@@ -1,0 +1,16 @@
+# Scenario 6: InvalidImageName -- the reference is syntactically malformed, not merely absent.
+# TESTS THE "Immediate" TERMINALITY CLAIM: this should fail without any backoff/retry,
+# because no amount of waiting can make an invalid name valid. If it produces a distinct
+# reason and no retry loop, that justifies Immediate as a separate terminality value
+# from Deadline (ImagePullBackOff), which retries for ~3 minutes.
+apiVersion: argoproj.io/v1alpha1
+kind: Workflow
+metadata:
+  generateName: repro-invalidimage-
+spec:
+  entrypoint: main
+  templates:
+    - name: main
+      container:
+        image: "THIS IS NOT A VALID IMAGE REFERENCE!!"
+        command: ["python", "-c", "print('never runs')"]

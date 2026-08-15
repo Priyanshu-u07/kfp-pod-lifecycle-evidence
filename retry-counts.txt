@@ -1,0 +1,37 @@
+=== repro-imagepull-lgz66 ===
+1     WorkflowRunning
+1     Scheduled
+1     Pulling
+1     Pulled
+1     Created
+1     Started
+1     Pulled
+1     Created
+1     Started
+5     Pulling
+5     Failed
+5     Failed
+151   BackOff
+153   Failed
+=== repro-configerror-klvsx ===
+1     WorkflowRunning
+1     Scheduled
+1     Pulled
+1     Created
+1     Started
+1     Pulled
+1     Created
+1     Started
+25    Pulled
+26    Failed
+=== repro-invalidimage-6rltc ===
+1     WorkflowRunning
+1     Scheduled
+1     Pulled
+1     Created
+1     Started
+1     Pulled
+1     Created
+1     Started
+26    InspectFailed
+12    Failed

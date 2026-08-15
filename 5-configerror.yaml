@@ -1,0 +1,22 @@
+# Scenario 5: CreateContainerConfigError -- references a Secret that does not exist.
+# A Secret referenced by secretAsEnv that has not been created is a commonly cited
+# instance of this reason, so the real message string is worth having on record.
+# Also interesting: this is TRANSIENT in a way image-typos are not -- someone can
+# create the Secret and the pod recovers with no change to the pipeline.
+apiVersion: argoproj.io/v1alpha1
+kind: Workflow
+metadata:
+  generateName: repro-configerror-
+spec:
+  entrypoint: main
+  templates:
+    - name: main
+      container:
+        image: python:3.11-slim
+        command: ["python", "-c", "print('never runs')"]
+        env:
+          - name: MISSING
+            valueFrom:
+              secretKeyRef:
+                name: does-not-exist
+                key: nope
