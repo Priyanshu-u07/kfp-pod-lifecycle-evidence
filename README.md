@@ -87,7 +87,7 @@ FailedScheduling  repro-unschedulable-…  0/1 nodes are available: 1 Insufficie
 Both carry the pod condition `PodScheduled / False / Unschedulable`, both produce the event
 reason `FailedScheduling`, and neither has any `containerStatuses`, so reading the pod object
 does not separate them either. Their prospects are opposite: capacity frees on its own
-(finding 6), while a storage class that does not exist never appears.
+(finding 7), while a storage class that does not exist never appears.
 
 Terminality therefore cannot be resolved from the reason alone. The detail text after the
 prefix is the discriminator.
